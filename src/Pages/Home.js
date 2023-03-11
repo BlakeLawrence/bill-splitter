@@ -12,7 +12,7 @@ function Home() {
           No More embarrasing bill splitting will be tolerated 😜"
         </h2>
       </div>
-      <button className="bg-white w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-[#05998C] font-medium hover:text-white hover:bg-[#05998C] sm:mr-6">
+      <button className="bg-white w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-[#05998C] font-medium sm:mr-6">
         <Link to="/">back to home</Link>
       </button>
     </div>

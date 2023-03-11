@@ -13,9 +13,11 @@ function Landing() {
         />
       </div>
       <div className=" flex flex-col justify-center items-center w-full h-1/2 bg-white bg-[url('/src/assets/bills.png')] bg-cover opacity-30">
-        <button className="bg-white w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-[#05998C] font-medium hover:text-white hover:bg-[#05998C]">
-          <Link to="/home">ENTER</Link>
-        </button>
+        <Link to="/home">
+          <button className="bg-white w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-[#05998C] font-medium hover:text-white hover:bg-[#05998C]">
+            ENTER
+          </button>
+        </Link>
       </div>
     </div>
   );

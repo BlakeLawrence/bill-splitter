@@ -9,7 +9,7 @@ function Home() {
           Watch this space Okes!!
         </h1>
         <h2 className="text-white text-lg text-center font-bold m-6">
-          No More embarrasing bill splitting will be tolerated 😜"
+          No More embarrasing bill splitting will be tolerated 😜
         </h2>
       </div>
       <button className="bg-white w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-[#05998C] font-medium sm:mr-6">

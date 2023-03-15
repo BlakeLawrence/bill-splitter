@@ -23,22 +23,22 @@ function Names() {
   };
 
   return (
-    <div className="w-full h-screen pt-2 bg-[#05998C] flex flex-col items-center ">
-      <h1 className="text-6xl mb-12 text-white underline">{groupName}</h1>
-      <h2 className="text-white text-3xl font-semibold mb-2">
+    <div className="w-full h-screen pt-2  flex flex-col items-center ">
+      <h1 className="text-6xl mb-12 text-[#38A37F] underline">{groupName}</h1>
+      <h2 className="text-[#38A37F] text-3xl font-semibold mb-2">
         Add the names of each participant below
       </h2>
 
       <input
         value={namesText}
-        className="rounded-lg"
+        className="rounded-lg border border-[#38A37F]"
         type="text"
         onChange={(e) => setNamesText(e.target.value)}
       />
 
       <br />
       <button
-        className="text-[#38A37F] font-bold bg-white px-2 py-1 rounded-lg"
+        className="text-[#38A37F] font-bold bg-white border border-[#38A37F] px-2 py-1 rounded-lg"
         onClick={addParticipants}
       >
         Add person
@@ -49,7 +49,7 @@ function Names() {
       </h3>
       <button
         onClick={() => setPayBill(!payBill)}
-        className="text-[#38A37F] font-bold bg-white px-2 py-1 rounded-lg"
+        className="text-[#38A37F] font-bold bg-white border border-[#38A37F] px-2 py-1 rounded-lg"
       >
         continue
       </button>
@@ -58,7 +58,7 @@ function Names() {
           onClick={() => setToggleNames(!toggleNames)}
           className={
             participants.length > 0
-              ? "bg-white w-[50px] h-[50px] flex justify-center rounded-3xl mt-12"
+              ? "bg-white w-[50px] h-[50px] flex justify-center rounded-3xl mt-12 border border-[#38A37F]"
               : ""
           }
         >
@@ -72,7 +72,7 @@ function Names() {
         <div
           className={
             toggleNames && participants.length > 0
-              ? "flex flex-col bg-white p-4 rounded-lg mb-2 mt-2"
+              ? "flex flex-col bg-white p-4 rounded-lg mb-2 mt-2  border border-[#38A37F]"
               : ""
           }
         >
@@ -95,15 +95,15 @@ function Names() {
         </div>
       </div>
       {payBill && (
-        <div className=" bg-white w-1/2 h-1/3 rounded-xl shadow-xl z-1">
+        <div className=" bg-white w-1/2 h-1/3 rounded-xl shadow-xl z-1  border border-[#38A37F]">
           <div
             onClick={() => setPayBill(!payBill)}
             className="flex justify-end p-2 text-red-500 cursor-pointer"
           >
             <AiFillCloseCircle />
           </div>
-          <div className=" flex flex-col items-center">
-            <h3 className="text-[#38A37F] text-3xl mt-4">
+          <div className=" flex flex-col items-center ">
+            <h3 className="text-[#38A37F] text-3xl mt-4 ">
               How would you like to pay the Bill?
             </h3>
 

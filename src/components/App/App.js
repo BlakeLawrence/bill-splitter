@@ -10,6 +10,7 @@ export const appContext = createContext();
 function App() {
   const [groupName, setGroupName] = useState("");
   const [groupNumber, setGroupNumber] = useState(null);
+  const [participants, setParticipants] = useState([]);
 
   return (
     <appContext.Provider
@@ -18,6 +19,8 @@ function App() {
         groupName,
         groupNumber,
         setGroupNumber,
+        participants,
+        setParticipants,
       }}
     >
       <Router>

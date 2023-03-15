@@ -9,12 +9,12 @@ function Landing() {
         <img
           src={logo}
           alt="split company logo"
-          className="w-[400px] h-[400px] ml-4 z-10"
+          className="w-[400px] h-[400px] ml-4"
         />
       </div>
       <Link to="/home">
-        <div className=" flex flex-col justify-center items-center w-full h-1/2 bg-[url('/src/assets/bills.png')] bg-cover opacity-30">
-          <button className="bg-white w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-lg text-[#38A37F] font-medium hover:text-white hover:bg-[#38A37F] z-30">
+        <div className=" flex flex-col justify-center items-center w-full h-1/2">
+          <button className="bg-[#38a37f] w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-lg text-white font-medium shadow-lg">
             CONTINUE
           </button>
         </div>

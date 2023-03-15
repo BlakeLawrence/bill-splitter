@@ -24,7 +24,7 @@ function Names() {
 
   return (
     <div className="w-full h-screen pt-2 bg-[#05998C] flex flex-col items-center ">
-      <h1 className="text-6xl mb-12">{groupName}</h1>
+      <h1 className="text-6xl mb-12 text-white underline">{groupName}</h1>
       <h2 className="text-white text-3xl font-semibold mb-2">
         Add the names of each participant below
       </h2>

@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
-import { AiFillCloseCircle } from "react-icons/ai";
+
 import { appContext } from "../components/App/App";
 import logo from "../assets/split.png";
 import { Link } from "react-router-dom";
 import { BsFillPersonFill } from "react-icons/bs";
+import currency from "../functions/currency.js";
 
 function Dashboard() {
   const {
@@ -38,11 +39,13 @@ function Dashboard() {
   return (
     <div className="w-full h-screen flex flex-col items-center">
       <div className="flex w-full justify-between pt-6 pl-6">
-        <img
-          src={logo}
-          alt="split company logo"
-          className="flex w-[225px] h-[225px]"
-        />
+        <Link to="/">
+          <img
+            src={logo}
+            alt="split company logo"
+            className="flex w-[225px] h-[225px]"
+          />
+        </Link>
         <h1 className="text-5xl italic text-[#38A37F] underline pt-12 pr-12">
           {groupName}
         </h1>
@@ -88,13 +91,6 @@ function Dashboard() {
                   </div>
                 );
               })}
-          </div>
-          <div className="">
-            {billAmount && <h3>Bill: £{billAmount}</h3>}
-            {tipAmount && <h3>Tip: £ {tipAmount}</h3>}
-            {owedAfterSplittingEvenly && (
-              <h3>Total: £ {owedAfterSplittingEvenly}</h3>
-            )}
           </div>
         </div>
       </div>
@@ -147,6 +143,23 @@ function Dashboard() {
           </button>
         </div>
       )}
+      <div className="flex bg-white p-4 rounded-lg mb-2 mt-12">
+        {owedAfterSplittingEvenly &&
+          participants.map((person) => {
+            return (
+              <div className=" grid auto-rows-auto auto-cols-auto">
+                <div className="flex-col justify-center items-center rounded-lg mr-2 border">
+                  <h2 className="text-[#38A37F] font-bold mr-8" key={person.id}>
+                    {person.name}
+                  </h2>
+                  <h3 className="text-[#38a37f] font-semibol">
+                    {currency(owedAfterSplittingEvenly)}
+                  </h3>
+                </div>
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }

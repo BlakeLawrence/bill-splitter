@@ -12,7 +12,7 @@ function Landing() {
           className="w-[400px] h-[400px] ml-4"
         />
       </div>
-      <Link to="/home">
+      <Link to="/bill-name">
         <div className=" flex flex-col justify-center items-center w-full h-1/2">
           <button className="bg-[#38a37f] w-4/12 sm:w-1/12 rounded-xl p-2 mt-24 text-lg text-white font-medium shadow-lg">
             CONTINUE

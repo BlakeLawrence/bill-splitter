@@ -21,12 +21,12 @@ function Home() {
           className="flex w-[225px] h-[225px]"
         />
       </div>
-
+      <div></div>
       <h1 className="text-[#38A37F] text-center text-3xl font-bold">
         Name your group / Bill
       </h1>
       <input
-        className="rounded-lg py-1 px-4 border border-[#05998C] mt-6 text-[#38A37F] text-center font-semibold"
+        className="rounded-lg py-1 px-4 border border-[#05998C] mt-6 text-[#38A37F] text-center font-semibold outline-none"
         type="text"
         onChange={(e) => setText(e.target.value)}
       />

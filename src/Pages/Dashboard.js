@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react";
-
+import React, { useContext, useEffect, useState } from "react";
 import { appContext } from "../components/App/App";
 import logo from "../assets/split.png";
 import { Link } from "react-router-dom";
@@ -20,6 +19,7 @@ function Dashboard() {
   const [tipText, setTipText] = useState("");
   const [owedAfterSplittingEvenly, setOwedAfterSplittingEvenly] =
     useState(null);
+  // const [ocr, setOcr] = useState({});
 
   const billTotal = () => {
     setBillAmount(Number(billText));
@@ -35,6 +35,17 @@ function Dashboard() {
   const splitBillEvenly = () => {
     setOwedAfterSplittingEvenly((billAmount + tipAmount) / participants.length);
   };
+
+  // const url = "http://localhost:5000";
+  // const ocrData = async () => {
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+  //   setOcr(data.message);
+  //   console.log(ocr.line_items);
+  // };
+  // useEffect(() => {
+  //   ocrData();
+  // }, []);
 
   return (
     <div className="w-full h-screen flex flex-col items-center">

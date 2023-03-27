@@ -12,6 +12,9 @@ function Home() {
     setText("");
   };
 
+  const inputClassName =
+    "rounded-lg py-1 px-4 border border-[#05998C] mt-6 text-[#38A37F] text-center font-semibold outline-none";
+
   return (
     <div className="w-full h-screen flex flex-col items-center">
       <div className="flex w-full pt-6 pl-6">
@@ -26,7 +29,7 @@ function Home() {
         Name your group / Bill
       </h1>
       <input
-        className="rounded-lg py-1 px-4 border border-[#05998C] mt-6 text-[#38A37F] text-center font-semibold outline-none"
+        className={inputClassName}
         type="text"
         onChange={(e) => setText(e.target.value)}
       />

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { appContext } from "../components/App/App";
 import logo from "../assets/split.png";
 import { Link } from "react-router-dom";

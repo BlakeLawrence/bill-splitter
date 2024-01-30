@@ -13,7 +13,7 @@ function Home() {
   };
 
   const inputClassName =
-    "rounded-lg py-1 px-4 border border-[#05998C] mt-6 text-[#38A37F] text-center font-semibold outline-none";
+    "rounded-lg py-0.5 px-1 md:py-1 md:px-4 border border-[#05998C] mt-4 md:mt-6 text-[#38A37F] text-left font-semibold outline-none";
 
   return (
     <div className="w-full h-screen flex flex-col items-center">
@@ -29,13 +29,14 @@ function Home() {
         Name your group / Bill
       </h1>
       <input
+        required
         className={inputClassName}
         type="text"
         onChange={(e) => setText(e.target.value)}
       />
       <Link to="/names">
         <button
-          className="bg-white border border-[#05998C]  rounded-xl p-2 mt-24 text-[#38A37F] font-medium sm:mr-6 hover:bg-[#38A37F] hover:text-white"
+          className="bg-white border border-[#05998C]  rounded-xl p-2 mt-12 md:mt-24 text-[#38A37F] font-medium hover:bg-[#38A37F] hover:text-white"
           onClick={group}
         >
           Continue

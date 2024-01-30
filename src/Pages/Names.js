@@ -24,16 +24,16 @@ function Names() {
 
   return (
     <div className="w-full h-screen flex flex-col items-center">
-      <div className="flex w-full justify-between pt-6 pl-6">
+      <div className="flex flex-col md:flex-row w-full justify-evenly pt-6 pl-6">
         <img
           src={logo}
           alt="split company logo"
-          className="flex w-[225px] h-[225px]"
+          className="ml-14 md:ml-0 flex text-center w-[200px] h-[200px] md:w-[225px] md:h-[225px]"
         />
-        <h1 className="text-5xl italic text-[#38A37F] underline pt-12 pr-12">
-          {groupName}
+        <h1 className="text-center text-2xl md:text-4xl italic text-[#38A37F] mt-4 md:pt-12 md:pr-12">
+          <span className="underline">Bill Name:</span> {groupName}
         </h1>
-        <div className="flex-col justify-between mr-12 w-[200px] z-20">
+        <div className="flex-col justify-evenly md:justify-between mr-12 w-full md:w-[200px] z-20">
           <div
             onClick={() => setToggleNames(!toggleNames)}
             className={
@@ -58,7 +58,7 @@ function Names() {
           <div
             className={
               toggleNames && participants.length > 0
-                ? "flex flex-col bg-white p-4 rounded-lg mb-2 mt-2  border border-[#38A37F] fixed z-10 shadow-md shadow-[#38A37F]"
+                ? "flex flex-col bg-white p-4 rounded-lg mb-2 mt-2 border border-[#38A37F] fixed z-10 shadow-md shadow-[#38A37F]"
                 : ""
             }
           >
@@ -85,11 +85,12 @@ function Names() {
         </div>
       </div>
 
-      <h2 className="text-[#38A37F] text-3xl font-semibold mb-2">
+      <h2 className="text-[#38A37F] text-xl md:text-3xl font-semibold mb-2 mt-8">
         Add participant names to bill...
       </h2>
       <div>
         <input
+          required
           value={namesText}
           className="rounded-lg border border-[#38A37F] py-0.5 mt-6 text-center text-[#38A37F] font-semibold outline-none"
           type="text"

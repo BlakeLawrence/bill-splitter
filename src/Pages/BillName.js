@@ -17,15 +17,15 @@ function Home() {
 
   return (
     <div className="w-full h-screen flex flex-col items-center">
-      <div className="flex w-full pt-6 pl-6">
+      <div className="flex justify-center w-full pt-6 mb-10">
         <img
           src={logo}
           alt="split company logo"
-          className="flex w-[225px] h-[225px]"
+          className="flex w-[180px] h-[180px] md:w-[225px] md:h-[225px]"
         />
       </div>
       <div></div>
-      <h1 className="text-[#38A37F] text-center text-3xl font-bold">
+      <h1 className="text-[#38A37F] text-center text-xl md:text-3xl font-bold">
         Name your group / Bill
       </h1>
       <input

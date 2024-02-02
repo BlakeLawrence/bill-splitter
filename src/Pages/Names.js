@@ -33,12 +33,12 @@ function Names() {
         <h1 className="text-center text-2xl md:text-4xl italic text-[#38A37F] mt-4 md:pt-12 md:pr-12">
           <span className="underline">Bill Name:</span> {groupName}
         </h1>
-        <div className="flex-col justify-evenly md:justify-between mr-12 w-full md:w-[200px] z-20">
+        <div className="flex justify-center md:justify-between md:mr-12 w-full md:w-[200px] z-20">
           <div
             onClick={() => setToggleNames(!toggleNames)}
             className={
               participants.length > 0
-                ? "bg-white w-[80px] h-[80px] flex justify-center rounded-3xl mt-12 border border-[#38A37F]"
+                ? "bg-white w-[80px] h-[80px] flex justify-center rounded-3xl mt-6 md:mt-12 border border-[#38A37F]"
                 : ""
             }
           >
@@ -65,15 +65,15 @@ function Names() {
             {toggleNames &&
               participants.map((person) => {
                 return (
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <h2
-                      className="text-[#38A37F] font-bold mr-4"
+                      className="text-[#38A37F] text-[12px] md:text-lg font-bold mr-4"
                       key={person.id}
                     >
                       {person.name}
                     </h2>
                     <button
-                      className="text-lg text-[#38A37F] font-bold"
+                      className=" text-[15px] md:text-lg text-[#38A37F] font-bold"
                       onClick={() => deletePerson(person.id)}
                     >
                       x

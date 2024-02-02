@@ -62,12 +62,15 @@ function Dashboard() {
         <h1 className="text-center text-2xl md:text-4xl italic text-[#38A37F] mt-8 md:pt-12 md:pr-12">
           <span className="underline">Bill Name:</span> {groupName}
         </h1>
-        <div className="flex-col justify-between mr-12 w-[200px] z-20">
+        <div
+          onClick={() => setToggleNames(!toggleNames)}
+          className="flex justify-center md:justify-between mb-1 md:mr-12 w-full md:w-[200px] z-20"
+        >
           <div
             onClick={() => setToggleNames(!toggleNames)}
             className={
               participants.length > 0
-                ? "bg-white w-[75px] h-[75px] md:w-[80px] md:h-[80px] flex justify-center rounded-3xl mt-12 border border-[#38A37F]"
+                ? "bg-white w-[75px] h-[75px] md:w-[80px] md:h-[80px] flex justify-center rounded-3xl mt-12 border border-[#38A37F] mb-8"
                 : ""
             }
           >

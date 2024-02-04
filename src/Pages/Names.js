@@ -65,7 +65,10 @@ function Names() {
             {toggleNames &&
               participants.map((person) => {
                 return (
-                  <div className="flex justify-between items-center">
+                  <div
+                    className="flex justify-between items-center w-[50px]"
+                    onClick={() => setToggleNames(!toggleNames)}
+                  >
                     <h2
                       className="text-[#38A37F] text-[12px] md:text-lg font-bold mr-4"
                       key={person.id}

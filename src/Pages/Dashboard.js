@@ -21,13 +21,9 @@ function Dashboard() {
     useState(null);
   // const [ocr, setOcr] = useState({});
 
-  const billTotal = () => {
+  const total = () => {
     setBillAmount(Number(billText));
-    console.log(typeof billText);
     setBillText("");
-  };
-
-  const tipTotal = () => {
     setTipAmount(Number(tipText));
     setTipText("");
   };
@@ -59,7 +55,7 @@ function Dashboard() {
             className="flex w-[200px] h-[200px] md:w-[225px] md:h-[225px]"
           />
         </Link>
-        <h1 className="text-center text-2xl md:text-4xl italic text-[#38A37F] mt-8 md:pt-12 md:pr-12">
+        <h1 className="text-center text-2xl md:text-4xl italic text-[#38A37F] mt-8 md:pt-12 md:pr-12 mb-12">
           <span className="underline">Bill Name:</span> {groupName}
         </h1>
         <div
@@ -111,24 +107,19 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="flex">
-        <div className="flex flex-col items-center justify-center mr-6">
-          <h1 className="text-[#38A37F] text-center text-xl md:text-2xl font-bold">
+      {/* Bill splitting logic */}
+
+      <div className="flex md:mt-12">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-[#38A37F] mr-3 text-center text-xl md:text-2xl font-bold">
             Enter Bill
           </h1>
           <input
             value={billText}
-            className="rounded-lg py-1 px-4 border border-[#05998C] mt-4 text-[#38A37F] text-center font-semibold outline-none w-[125px] md:w-[200px]"
+            className="rounded-lg py-1 px-4 border border-[#05998C] mt-4 text-[#38A37F] text-center font-semibold outline-none w-[125px] md:w-[200px] mr-3"
             type="number"
             onChange={(e) => setBillText(e.target.value)}
           />
-
-          <button
-            className="bg-white border border-[#05998C]  rounded-xl p-1 md:p-2 mt-2 text-[#38A37F] font-medium sm:mr-6 hover:bg-[#38A37F] hover:text-white"
-            onClick={billTotal}
-          >
-            Enter
-          </button>
         </div>
         <div className="flex flex-col items-center">
           <h1 className="text-[#38A37F] text-center text-xl md:text-2xl font-bold">
@@ -140,19 +131,19 @@ function Dashboard() {
             type="number"
             onChange={(e) => setTipText(e.target.value)}
           />
-
-          <button
-            className="bg-white border border-[#05998C]  rounded-xl p-1 md:p-2 mt-2 text-[#38A37F] font-medium sm:mr-6 hover:bg-[#38A37F] hover:text-white"
-            onClick={tipTotal}
-          >
-            Enter
-          </button>
         </div>
       </div>
+      <button
+        className="bg-white border border-[#05998C]  rounded-xl p-1 md:p-2 mt-5 text-[#38A37F] font-medium sm:mr-6 hover:bg-[#38A37F] hover:text-white"
+        onClick={total}
+      >
+        Enter
+      </button>
+
       {billAmount > 0 && (
         <div className=" mt-4 md:mt-24">
           <button
-            className="bg-white border border-[#05998C]  rounded-xl px-1.5 py-1.5 md:px-12 md:py-2 mt-2 text-[#38A37F] font-medium sm:mr-6 hover:bg-[#38A37F] hover:text-white textlg md:text-3xl"
+            className="bg-white border border-[#05998C]  rounded-xl px-1.5 py-1.5 md:px-12 md:py-2 mt-2 text-[#38A37F] font-medium sm:mr-6 hover:bg-[#38A37F] hover:text-white textlg md:text-3xl animate-small"
             onClick={splitBillEvenly}
           >
             SPLIT

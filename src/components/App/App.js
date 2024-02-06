@@ -1,10 +1,10 @@
 import "./App.css";
-import BillName from "../../Pages/BillName";
-import Landing from "../../Pages/Landing";
+import BillName from "../../Pages/BillName.js";
+import Landing from "../../Pages/Landing.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Names from "../../Pages/Names";
+import Names from "../../Pages/Names.js";
 import { createContext, useState } from "react";
-import Dashboard from "../../Pages/Dashboard";
+import Dashboard from "../../Pages/Dashboard.js";
 
 export const appContext = createContext();
 
